@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: red;
+    overflow: hidden;
+}
+
+.gameContainer {
+    background-image: url(../Resource/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+    /* width: 100%;
+    height: 100vh; */
+}
+
+.dino {
+    /* mix-blend-mode: darken; */
+    background-image: url(../Resource/dino.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 335px;
+    height: 190px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+
+.obstacle {
+    mix-blend-mode: darken;
+    width: 250px;
+    height: 160px;
+    background-image: url(../Resource/cactus.gif);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 420px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver {
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#scoreCont {
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    /* width: 112px; */
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 110vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
